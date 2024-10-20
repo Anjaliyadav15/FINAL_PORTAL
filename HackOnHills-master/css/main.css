@@ -26,103 +26,7 @@ body {
 	overflow-x: hidden;
 }
 
-/* .header {
-	position: fixed;
-	top: 0px;
-	bottom: 0px;
-	background-color: #d3dcdf;
-	z-index: 12;
-	text-align: center;
-	-webkit-transition: left 0.3s;
-	-moz-transition: left 0.3s;
-	transition: left 0.3s;
-} */
 
-/* .header.active {
-	left: 0%;
-}
-
-.header .nav {
-	list-style-type: none;
-}
-
-.header .nav .navItem {
-	left: -300px;
-}
-
-.header .nav .navItem.visible {
-	left: 0px;
-}
-
-.header .nav .navItem {
-	position: relative;
-	padding: 15px 30px;
-	color: #022149;
-	cursor: pointer;
-	font-family: 'primetime';
-	font-size: 1em;
-	background-color: rgba(211, 220, 223, 1);
-	-webkit-transition: background-color 0.2s, left 0.2s;
-	-moz-transition: background-color 0.2s, left 0.2s;
-	transition: background-color 0.2s, left 0.2s;
-}
-
-.header .nav .navItem.active {
-	color: #0b2228;
-}
-
-.header .nav .navItem:hover {
-	background-color: rgba(255,255,255,0.2);
-}
-
-.header .nav .head {
-	display: none;
-	text-align: right;
-	padding: 20px;
-}
-
-.header .nav .head .closeHeader {
-	cursor: pointer;
-}
-
-.header .nav .head img {
-	height: 20px;
-}
-
-.content {
-	width: 100%;
-	height: 100%;
-	position: relative;
-	left: 0%;
-	-webkit-transition: left 0.3s;
-	-moz-transition: left 0.3s;
-	transition: left 0.3s;
-}
-
-.hamburger {
-	position: fixed;
-	top: 20px;
-	left: 20px;
-	color: white;
-	z-index: 10;
-	cursor: pointer;
-}
-
-.hamburger img {
-	height: 30px;
-}
-
-.appteam-logo {
-	position: fixed;
-	top: 20px;
-	right: 20px;
-	z-index: 10;
-}
-
-.appteam-logo img {
-	height: 60px;
-	width: 50px;
-} */
 .navbar {
     position: fixed;
     top: 0;
@@ -471,7 +375,7 @@ body {
 
 .frame3 {
 	height: auto;
-	padding: 150px 0px;
+	padding: px 0px;
 	background-color: #041e3f;
 	color: white;
 	font-family: 'Didact Gothic';
@@ -558,7 +462,7 @@ body {
 ***********************/
 
 .frame4 {
-	/*min-height: 100%;*/
+	min-height: 100%;
 	height: auto;
 	margin-bottom: 30px;
 }
@@ -789,11 +693,11 @@ body {
 /**********************
 	   PRIZES PAGE
 ***********************/
-
 .frame6 {
 	height: auto;
 	margin-bottom: 30px;
 	text-align: center;
+	
 }
 
 .frame6 .name {
@@ -998,6 +902,7 @@ box-sizing: border-box;
     transform: translateY(-10px); /* Moves the card 10px upwards */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Adds a shadow for depth */
 }
+
 /***********************
 		FAQ PAGE
 ***********************/
