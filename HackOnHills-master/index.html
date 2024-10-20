@@ -37,60 +37,57 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
+      document.addEventListener('DOMContentLoaded', function () {
         let devfolioOptions = {
-          buttonSelector: "#devfolio-apply-now",
-          key: "hackonhills",
-        };
-
-        let script = document.createElement("script");
+            buttonSelector: '#devfolio-apply-now',
+            key: 'hackonhills',
+        }
+  
+        let script = document.createElement('script');
         script.src = "https://apply.devfolio.co";
         document.head.append(script);
-
+  
         script.onload = function () {
-          new Devfolio(devfolioOptions);
-          let e1 = document.createElement("div");
-          e1.className = "button-back";
-          document.getElementById("devfolio-apply-now").appendChild(e1);
-        };
-
+            new Devfolio(devfolioOptions);
+            let e1 = document.createElement('div');
+            e1.className = "button-back";
+            document.getElementById("devfolio-apply-now").appendChild(e1);
+        }
+  
         script.onerror = function () {
-          document
-            .querySelector(devfolioOptions.buttonSelector)
-            .addEventListener("click", function () {
-              window.location.href =
-                "https://devfolio.co/external-apply/" + devfolioOptions.key;
+            document.querySelector(devfolioOptions.buttonSelector).addEventListener('click', function () {
+              window.location.href = 'https://devfolio.co/external-apply/' + devfolioOptions.key;
             });
-        };
+        }
       });
       function openCard(element,contentId) {
-			const modal = document.getElementById("cardModal");
-			const modalText = document.getElementById("modalText");
-
-        // Get the image and text from the clicked card
-        const prizeText = element.querySelector(".prize-text").innerText;
-		const content = document.getElementById(contentId).innerHTML;
-
-        // Set the modal image and text
-        modalText.innerHTML = content;
-
-        // Display the modal
-        modal.style.display = "block";
-    }
-
-    // Function to close the card modal
-    function closeCard() {
-        const modal = document.querySelector("#cardModal");
-        modal.style.display = "none";
-    }
-
-    // Close modal when clicking outside of the content
-    window.onclick = function(event) {
-        const modal = document.querySelector("#cardModal");
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
+        const modal = document.getElementById("cardModal");
+        const modalText = document.getElementById("modalText");
+  
+          // Get the image and text from the clicked card
+          const prizeText = element.querySelector(".prize-text").innerText;
+      const content = document.getElementById(contentId).innerHTML;
+  
+          // Set the modal image and text
+          modalText.innerHTML = content;
+  
+          // Display the modal
+          modal.style.display = "block";
+      }
+  
+      // Function to close the card modal
+      function closeCard() {
+          const modal = document.querySelector("#cardModal");
+          modal.style.display = "none";
+      }
+  
+      // Close modal when clicking outside of the content
+      window.onclick = function(event) {
+          const modal = document.querySelector("#cardModal");
+          if (event.target == modal) {
+              modal.style.display = "none";
+          }
+      }
     </script>
   </head>
   <body>
@@ -108,142 +105,137 @@
       </ul>
     </nav>
 
-    <div class="fullOverlay"></div>
-    <div class="content" >
-      <!-- <div class="hamburger">
-			<img src="./images/menu.svg">
-		</div> -->
-      <!-- <div class="appteam-logo"> -->
-      <!--<img src="./images/logo.svg" title="App Team NITH">-->
-      <!-- </div> -->
-       
-      <div class="frame frame1" id="home">
-        <img src="./images/back-1.svg" class="img-back" />
-        <!-- <div class="frame1-right">
+  <div class="fullOverlay"></div>
+	<div class="content">
+		
+		<div class="frame frame1">
+			<img src="./images/back-1.svg" class="img-back">
+			<!-- <div class="frame1-right">
 				<img src="./images/frame1-icon.svg">
 			</div> -->
-        <img src="./images/HC banner (1).png" class="full-width-image" />
-        <div class="frame1-left">
-          <!-- <div class="content">
-					<div class="sponsor-name"> <img src="./images/GitHub_Logo_White.png" class="github-home-icon"> Presents </div>
-					<div class="name"> Hack on Hills</div><br>
-					<div class="date"> 8 - 10 March 2019 </div><br>
-					<div class="date"> NIT Hamirpur </div>
-					<div class="devfolio">
-						<button id="devfolio-apply-now"> Apply With Devfolio </button>
+			<img src="./images/5_20241018_140438_0004.png" class="full-width-image">
+			<div class="frame1-left">
+			
+			</div>
+			
+		</div>
+		
+    <div class="frame frame2"  id="name" >
+      <img class="img-back-left" src="./images/back-2.svg" />
+      <img class="img-back" src="./images/back-3.svg" />
+      <div class="frame2-left">
+        <img src="./images/Sponsors/about.jpg" style="height: 350px; width: 450px; margin-left: 30px; border-radius: 20px; margin-top: 30px;" />
+      </div>
+      <div class="frame2-right">
+         <div class="name">About us!!</div> 
+        <div class="content">
+          <p>
+            Welcome to *Hack Celestial 2024*—Banasthali Vidyapith’s premier
+            national hackathon! A dynamic platform for coders, thinkers, and
+            innovators, this 48-hour event challenges you to tackle diverse,
+            cutting-edge problem statements in AI, blockchain, cybersecurity,
+            and more. Compete with brilliant minds from across India,
+            collaborate on groundbreaking solutions, and gain mentorship from
+            top industry experts.
+          </p>
+          <p>
+            *National Participation | Diverse Challenges | 3 Days of Non-Stop
+            Innovation*
+          </p>
+          <p>
+            The countdown to brilliance begins now—don’t miss your chance to
+            be part of something extraordinary!
+          </p>
+          <p>
+            <button
+              class="button button2"
+              style="height: 70px; width: 200px"
+              onclick="window.location.href='https://forms.gle/qXdcRf8RtF4Ph2f87'"
+            >
+              Register Now
+            </button>
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="frame frame6" id="Themes">
+			<div style="background-color: #041e3f;">
+			<img src="./images/back-4.svg" class="img-back" />
+			<div class="name" style="color: white;"> PROBLEM STATEMENTS </div>
+      <br>
+          <br>
+			<div class="prizes">
+				<div class="prizes-cont">
+					<div class="prize" onclick="openCard(this,'content1')">
+						<div class="prize-img">
+							<img class="img-square" src="./images/Sponsors/ai-ml.png">
+						</div>
+						<div class="prize-text">AI-ML</div>
 					</div>
-				</div> -->
-        </div>
-      </div>
-      <div class="frame frame2"  id="name" >
-        <img class="img-back-left" src="./images/back-2.svg" />
-        <img class="img-back" src="./images/back-3.svg" />
-        <div class="frame2-left">
-          <img src="./images/logo8cm.png" style="height: 350px; width: 350px; margin-left: 50px;" />
-        </div>
-        <div class="frame2-right">
-           <div class="name">About us!!</div> 
-          <div class="content">
-            <p>
-              Welcome to *Hack Celestial 2024*—Banasthali Vidyapith’s premier
-              national hackathon! A dynamic platform for coders, thinkers, and
-              innovators, this 48-hour event challenges you to tackle diverse,
-              cutting-edge problem statements in AI, blockchain, cybersecurity,
-              and more. Compete with brilliant minds from across India,
-              collaborate on groundbreaking solutions, and gain mentorship from
-              top industry experts.
-            </p>
-            <p>
-              *National Participation | Diverse Challenges | 3 Days of Non-Stop
-              Innovation*
-            </p>
-            <p>
-              The countdown to brilliance begins now—don’t miss your chance to
-              be part of something extraordinary!
-            </p>
-            <p>
-              <button
-                class="button button2"
-                style="height: 70px; width: 200px"
-                onclick="window.location.href='https://forms.gle/qXdcRf8RtF4Ph2f87'"
-              >
-                Register Now
-              </button>
-            </p>
-          </div>
-        </div>
-      </div>
-      </div>
-      <div class="frame frame6" id="Themes" >
-        <div style="background-color: #022149;">
-        <img src="./images/back-4.svg" class="img-back" />
-        <h1 class="name" style="color: white;"> Problem statements</h1>
-        <!-- <div</div> -->
-        <br>
-        <br>
-        <div class="prizes">
-          <div class="prizes-cont">
-            <div class="prize" onclick="openCard(this,'content1')">
-              <div class="prize-img">
-                <img class="img-square" src="./images/Sponsors/ai-ml.png">
-              </div>
-              <div class="prize-text">AI-ML</div>
-            </div>
-            <div class="prize" onclick="openCard(this,'content2')">
-              <div class="prize-img">
-                <img class="img-square" src="./images/Sponsors/internetofthings.jpg">
-              </div>
-              <div class="prize-text">Internet of Things (IoT)</div>
-            </div>
-            <div class="prize" onclick="openCard(this,'content3')">
-              <div class="prize-img">
-                <img class="img-square" src="./images/Sponsors/blockchain.png">
-              </div>
-              <div class="prize-text">Blockchain Technology</div>
-            </div>
-            <div class="prize" onclick="openCard(this,'content4')">
-              <div class="prize-img">
-                <img class="img-square" src="./images/Sponsors/arvr.jpg">
-              </div>
-              <div class="prize-text">AR-VR</div>
-            </div>
-            <div class="prize" onclick="openCard(this,'content5')">
-              <div class="prize-img">
-                <img class="img-square" src="./images/Sponsors/cybersecurity.jpeg">
-              </div>
-              <div class="prize-text">Cybersecurity</div>
-            </div>
-            <div class="prize" onclick="openCard(this,'content6')">
-              <div class="prize-img">
-                <img class="img-square" src="./images/Sponsors/cloudcomputing.jpg">
-              </div>
-              <div class="prize-text">Cloud Computing</div>
-            </div>
-            <div class="prize" onclick="openCard(this,'content7')">
-              <div class="prize-img">
-                <img class="img-square" src="./images/Sponsors/robott.jpeg">
-              </div>
-              <div class="prize-text">Robotics/Drones</div>
-            </div>
-            <div class="prize" onclick="openCard(this,'content6')">
-              <div class="prize-img">
-                <img class="img-square" src="./images/Sponsors/hasura_logo_horizontal_black.png">
-              </div>
-              <div class="prize-text">Best App using GraphQL - ₹ 5000 Flipkart Voucher</div>
-            </div>
-            <div class="prize" onclick="openCard(this,'content7')">
-              <div class="prize-img">
-                <img class="img-square" src="./images/Sponsors/Matic_Logo.png">
-              </div>
-              <div class="prize-text">Best Ethereum App - ₹ 5000 Cash</div>
-            </div>
-          </div>
-      </div>
-        </div>
-        <!-- <img src="./images/back-5.svg" class="img-back-bottom" /> -->
-        <img src="./images/back-1.svg" class="img-back" />
-      </div>
-      
+					<div class="prize" onclick="openCard(this,'content2')">
+						<div class="prize-img">
+							<img class="img-square" src="./images/Sponsors/internetofthings.jpg">
+						</div>
+						<div class="prize-text">Internet of Things (IoT)</div>
+					</div>
+					<div class="prize" onclick="openCard(this,'content3')">
+						<div class="prize-img">
+							<img class="img-square" src="./images/Sponsors/blockchain.png">
+						</div>
+						<div class="prize-text">Blockchain Technology</div>
+					</div>
+					<div class="prize" onclick="openCard(this,'content4')">
+						<div class="prize-img">
+							<img class="img-square" src="./images/Sponsors/arvr.jpg">
+						</div>
+						<div class="prize-text">AR-VR</div>
+					</div>
+					<div class="prize" onclick="openCard(this,'content5')">
+						<div class="prize-img">
+							<img class="img-square" src="./images/Sponsors/cybersecurity.jpeg">
+						</div>
+						<div class="prize-text">Cybersecurity</div>
+					</div>
+					<div class="prize" onclick="openCard(this,'content6')">
+						<div class="prize-img">
+							<img class="img-square" src="./images/Sponsors/cloudcomputing.jpg">
+						</div>
+						<div class="prize-text">Cloud Computing</div>
+					</div>
+					<div class="prize" onclick="openCard(this,'content7')">
+						<div class="prize-img">
+							<img class="img-square" src="./images/Sponsors/robott.jpeg">
+						</div>
+						<div class="prize-text">Robotics/Drones</div>
+					</div>
+					<div class="prize" onclick="openCard(this,'content6')">
+						<div class="prize-img">
+							<img class="img-square" src="./images/Sponsors/hasura_logo_horizontal_black.png">
+						</div>
+						<div class="prize-text">Best App using GraphQL - ₹ 5000 Flipkart Voucher</div>
+					</div>
+					<div class="prize" onclick="openCard(this,'content7')">
+						<div class="prize-img">
+							<img class="img-square" src="./images/Sponsors/Matic_Logo.png">
+						</div>
+						<div class="prize-text">Best Ethereum App - ₹ 5000 Cash</div>
+					</div>
+				</div>
+			</div>
+			</div>
+			<img src="./images/back-5.svg" class="img-back" />
+		</div>
+		
+			<!-- Modal for displaying card details -->
+			<div id="cardModal" class="modal">
+				<span class="close" onclick="closeCard()">&times;</span>
+				<div class="modal-content">
+					<div id="modalImage" class="modal-img"></div>
+					<div id="modalText" class="modal-text"></div>
+				</div>
+			</div>
+		
       <!-- Content Data for the Modal -->
   <div id="content1" style="display: none;">
       <ol type="1">
@@ -314,13 +306,13 @@
   </div>
            
     </div> 
-        </div>
+    </div>
       </div>
       <div class="frame frame4" id="Timeline">
         <img class="img-back-left" src="./images/back-3.svg" />
         <img class="img-back" src="./images/back-2.svg" />
         <div class="frame4-left">
-          <img src="./images/frame2-right.svg" />
+          <img src="https://i.pinimg.com/originals/1e/bb/ad/1ebbadda5cbd38662d07f54f0ee14679.gif" style="border-radius: 20%;" />
         </div>
         <div class="frame4-right">
           <div class="name">Timeline</div>
@@ -535,9 +527,10 @@
           </div>
         </div>
       </div>
-      <div class="frame frame8">
+    </div>
+       <div class="frame frame8">
         <div class="footer-icons">
-          <a href="https://github.com/appteam-nith/HackOnHills" target="__blank"
+          <a href="https://github.com/HackCelestia" target="__blank"
             ><img src="./images/github-color.svg"
           /></a>
           <a
@@ -561,8 +554,10 @@
         <div class="footer-text">
           <u><a href="privacy.html" target="__blank"> Privacy Policy </a></u>
         </div>
-      </div>
-    </div>
+      </div> 
+    
+    
+  
     <script type="text/javascript" src="./js/menu.js"></script>
   </body>
 </html>
